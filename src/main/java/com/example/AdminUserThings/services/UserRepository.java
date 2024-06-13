@@ -1,4 +1,4 @@
-package com.example.AdminUserThings.controllers;
+package com.example.AdminUserThings.services;
 
 
 import com.example.AdminUserThings.models.User;
