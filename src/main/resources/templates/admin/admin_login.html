@@ -6,10 +6,23 @@
 </head>
 <body>
 <div align="center">
-  <h2>Welcome to Admin User Things</h2>
-  <p>
-  <h4><a th:href="@{/admin/login}">Admin Login</a></h4>
-  <h4><a th:href="@{/user/login}">User Login</a></h4>
+  <h2>Admin Login Section</h2>
+  <form th:action="@{/admin/admin_login}">
+    <table>
+      <tr>
+        <td>E-mail: </td>
+        <td><input type="email" required></td>
+      </tr>
+      <tr>
+        <td>Password: </td>
+        <td><input type="password" required></td>
+      </tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="Login"></td>
+      </tr>
+    </table>
+  </form>
 </div>
 </body>
 </html>
