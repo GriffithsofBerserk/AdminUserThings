@@ -20,4 +20,9 @@ public class MainController {
     public String viewUserLoginPage() {
         return "user/user_login";
     }
+
+    @GetMapping("/admin/home")
+    public String viewAdminHomePage() {
+        return "admin/admin_login";
+    }
 }
