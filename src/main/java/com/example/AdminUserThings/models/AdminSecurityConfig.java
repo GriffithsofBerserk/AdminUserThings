@@ -26,19 +26,18 @@ public class AdminSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain1(HttpSecurity http) throws Exception{
 
-        //http.authorizeRequests().requestMatchers("/").permitAll();
-        //http.requestMatchers("/admin/**").authorizeRequests().anyRequest().hasAuthority("ADMIN")
+        //http.authorizeRequests().antMatchers("/").permitAll();
+        //http.antMatchers("/admin/**").authorizeRequests().anyRequest().hasAuthority("ADMIN").and().formLogin().loginPage("/admin/login").usernameParameters("email").loginProcessingUrl("/admin/login").defaultSuccessUrl("/admin/home").permitAll().and().logout().logoutUrl("/admin/logout").logoutSuccessUrl("/");
 
-        //http.authorizeHttpRequests((authz) -> authz
-                       // .requestMatchers("/admin/**").hasAuthority("ADMIN")
-                       // .anyRequest().authenticated()
-               // )
-              //  .formLogin(form -> form
-                       // .loginPage("/admin/login").usernameParameter("email").loginProcessingUrl("/admin/login")
-                       // .defaultSuccessUrl("/admin/home")
-                       // .permitAll()
-                //)
-              //  .logout(logout -> logout.logoutUrl("/admin/logout").logoutSuccessUrl("/"));
+        http.authorizeRequests((authz) -> authz
+                        .requestMatchers("/admin/**").hasAuthority("ADMIN")
+                )
+                .formLogin(form -> form
+                        .loginPage("/admin/login").usernameParameter("email").loginProcessingUrl("/admin/login")
+                        .defaultSuccessUrl("/admin/home")
+                        .permitAll()
+                )
+                .logout(logout -> logout.logoutUrl("/admin/logout").logoutSuccessUrl("/"));
         return http.build();
     }
 }

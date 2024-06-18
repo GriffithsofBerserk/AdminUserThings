@@ -23,6 +23,6 @@ public class MainController {
 
     @GetMapping("/admin/home")
     public String viewAdminHomePage() {
-        return "admin/admin_login";
+        return "admin/admin_home";
     }
 }
