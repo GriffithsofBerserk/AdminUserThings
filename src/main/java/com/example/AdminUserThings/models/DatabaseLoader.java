@@ -19,12 +19,10 @@ public class DatabaseLoader {
     @Bean
     public CommandLineRunner initializeDatabase(){
         return args -> {
-            User user1 = new User("deneme1@gmail.com","admin123",Role.ADMIN);
-            User user2 = new User("deneme2@gmail.com","david123", Role.ADMIN);
-            User user3 = new User("deneme3@gmail.com","alex123",Role.USER);
-            User user4 = new User("deneme4@gmail.com","jane123",Role.USER);
+            User user1 = new User("deneme1@gmail.com","admin123");
+            User user2 = new User("deneme2@gmail.com","david123");
 
-            repo.saveAll(List.of(user1,user2,user3,user4));
+            repo.saveAll(List.of(user1,user2));
 
             System.out.println("Sample database initialized");
         };
