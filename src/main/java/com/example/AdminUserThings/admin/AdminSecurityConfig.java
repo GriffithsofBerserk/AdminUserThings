@@ -1,4 +1,4 @@
-package com.example.AdminUserThings.models;
+package com.example.AdminUserThings.admin;
 
 import com.example.AdminUserThings.services.CustomerUserDetailsService;
 import org.springframework.context.annotation.Bean;

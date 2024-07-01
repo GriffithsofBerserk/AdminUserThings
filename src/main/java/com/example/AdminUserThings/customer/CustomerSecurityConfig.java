@@ -1,4 +1,4 @@
-package com.example.AdminUserThings.models;
+package com.example.AdminUserThings.customer;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +8,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @Order(2)
-public class UserSecurityConfig {
+public class CustomerSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain2(HttpSecurity http) throws Exception{
