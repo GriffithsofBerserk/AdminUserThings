@@ -1,6 +1,6 @@
-package com.example.AdminUserThings.services;
+package com.example.AdminUserThings.admin;
 
-import com.example.AdminUserThings.models.User;
+import com.example.AdminUserThings.admin.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

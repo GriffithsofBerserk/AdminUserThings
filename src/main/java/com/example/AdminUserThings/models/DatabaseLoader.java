@@ -1,6 +1,7 @@
 package com.example.AdminUserThings.models;
 
-import com.example.AdminUserThings.services.UserRepository;
+import com.example.AdminUserThings.admin.User;
+import com.example.AdminUserThings.admin.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

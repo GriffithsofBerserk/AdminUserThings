@@ -1,7 +1,5 @@
-package com.example.AdminUserThings.services;
+package com.example.AdminUserThings.admin;
 
-import com.example.AdminUserThings.models.CustomerUserDetails;
-import com.example.AdminUserThings.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

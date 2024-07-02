@@ -1,4 +1,4 @@
-package com.example.AdminUserThings.models;
+package com.example.AdminUserThings.admin;
 
 import jakarta.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.example.AdminUserThings.models;
+package com.example.AdminUserThings.admin;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
