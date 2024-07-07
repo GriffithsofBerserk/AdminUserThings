@@ -15,7 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class AdminSecurityConfig {
 
     @Bean
-    public UserDetailsService userDetailsService(){
+    public CustomerUserDetailsService userDetailsService(){
         return new CustomerUserDetailsService();
     }
 
@@ -34,7 +34,7 @@ public class AdminSecurityConfig {
     }
     @Bean
     public SecurityFilterChain filterChain1(HttpSecurity http) throws Exception{
-
+        http.authenticationProvider(authenticationProvider1());
         //http.authorizeRequests().antMatchers("/").permitAll();
         //http.antMatchers("/admin/**").authorizeRequests().anyRequest().hasAuthority("ADMIN").and().formLogin().loginPage("/admin/login").usernameParameters("email").loginProcessingUrl("/admin/login").defaultSuccessUrl("/admin/home").permitAll().and().logout().logoutUrl("/admin/logout").logoutSuccessUrl("/");
 
